@@ -1,15 +1,9 @@
 import express, { Request, Response } from 'express';
+import { queryParamToInt } from './utils';
 
 const app = express();
 
 app.use(express.json());
-
-function queryParamToInt(a: Request['query'][string]) {
-    if (!a || typeof(a) !== "string" || !Number.isInteger(+a)) {
-        return NaN;
-    }
-    return Number.parseInt(a);
-}
 
 app.get("/add", (req: Request, res: Response) => {
     const a = queryParamToInt(req.query.a);
