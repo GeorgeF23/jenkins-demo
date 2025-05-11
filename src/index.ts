@@ -20,3 +20,5 @@ app.get("/add", (req: Request, res: Response) => {
 app.listen(3000, () => {
     console.log("App started");
 });
+
+export default app;

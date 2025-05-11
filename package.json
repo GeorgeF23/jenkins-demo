@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "test:unit": "jest",
+    "test:unit": "jest -c tests/unit/jest.config.js",
+    "test:integration": "jest -c tests/integration/jest.config.js",
     "lint": "eslint",
     "dev": "ts-node src/index.ts"
   },
@@ -18,11 +19,13 @@
     "@types/express": "^5.0.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.17",
+    "@types/supertest": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
     "eslint": "^9.26.0",
     "globals": "^16.1.0",
     "jest": "^29.7.0",
+    "supertest": "^7.1.0",
     "ts-jest": "^29.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
